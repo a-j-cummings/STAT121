@@ -1,0 +1,70 @@
+---
+title: "Application: Textbook Costs"
+author: "Jared Cummings"
+date: "Winter 2022"
+output: html_document
+---
+
+# File structure
+To run this file, you have to have the $\texttt{textbook_costs.csv}$ and $\texttt{textbook_costs.Rmd}$ in the same folder. You also have to be running R in that folder. If you are having trouble figuring this out, this is something we should talk about ASAP. You may not have used a computer in this way before.
+
+# Lecture 2
+## Setup
+The first thing to do in any analysis with $\texttt{R}$ is to import any libraries that will be needed. This should always be done at the beginning of any code so someone who is unfamiliar with the code knows what is required to run it.
+```{r, setup}
+library(tidyverse)
+```
+
+## Reading in the data
+Reading in data is done with the $\texttt{read_csv}$ function from the tidyverse library. There are other file types, but in this class we will only use comma separated variable files (CSV). 
+A function in $\texttt{R}$ takes arguments inside of closed parenthesis. When there is more than one argument, the arguments must be separated by commas. To make sure that an argument is used in the right way, keywords can be used like $\texttt{skip}$ in the code below.
+```{r, data}
+textbooks <- read_csv('textbook_costs.csv', skip=1)
+```
+The $\texttt{skip}$ argument is used here because the first line of the file is a description of the data, which though useful is not something we need to read in.
+
+Functions often return values too. The assignment opperator $\texttt{<-}$ tells $\texttt{R}$ where to put these returned values. In the example above the returned value of the $\texttt{read_csv}$ function is being stored in the object $\texttt{textbooks}$. Object names cannot have spaces in them. If you want multiple words in the object name the convention is to separate them with an underscore and use only lowercase.
+
+If you get the error message like this one when using any function from tidyverse, including the $\texttt{read_csv}$ function
+
+> Error: object 'read_csv' not found
+
+then you haven't loaded the tidyverse library and need to run $\texttt{library(tidyverse)}$ at the top of your code.
+
+## Exploring the data
+
+One way to get familiar with the data that has been read in we can use the $\texttt{head}$ and $\texttt{tail}$ functions. 
+
+$\texttt{head}$ prints out the first six lines of the data:
+```{r, head}
+head(textbooks)
+```
+$\texttt{tail}$ prints out the last six:
+```{r, tail}
+tail(textbooks)
+```
+
+The $\texttt{unique}$ function prints out the unique values of a vector. To get a vector we need to specify the data object (called a dataframe) and the column name we want to look at, separated by a dollar sign. For this example the data object is $\texttt{textbooks}$ and the column in $\texttt{cost}$.
+```{r, unique}
+unique(textbooks$cost)
+```
+
+Other useful functions are $\texttt{nrow}$ and $\texttt{ncol}$, which give the number of rows and columns of the dataframe.
+```{r}
+nrow(textbooks)
+ncol(textbooks)
+```
+So we can see that $\texttt{textbooks}$ has 63 rows and 1 column.
+
+When you have more than one column a useful way to get a list of all of the column names is the $\texttt{colnames}$ function. It is used like this:
+```{r}
+colnames(textbooks)
+```
+
+
+## Questions
+1. What is the population we are trying to learn about by using the textbook costs data?
+2. What is the sample size of the data?
+3. What is the random variable for the textbook costs data?
+4. From looking at the data, what is the sample space?
+5. What is an event that could be in the sample space but is not in the data?
