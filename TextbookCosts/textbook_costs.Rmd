@@ -65,6 +65,6 @@ colnames(textbooks)
 ## Questions
 1. What is the population we are trying to learn about by using the textbook costs data?
 2. What is the sample size of the data?
-3. What is the random variable for the textbook costs data?
+3. What is the random variable for the textbook costs data? What are the units?
 4. From looking at the data, what is the sample space?
 5. What is an event that could be in the sample space but is not in the data?
