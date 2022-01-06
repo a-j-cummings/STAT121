@@ -35,7 +35,7 @@ Answer goes here
 #### 6. Is the value you computed in (5) a parameter or a statistic? Defend your answer.\newline
 Answer goes here
 
-#### Multiple choice. Put an X in the box of the answer you select (like this: [X])
+#### Multiple choice. Put an X in the box of the answer you select (like this: [X])\newline
 An average is always a
 
 [ ] a) parameter
