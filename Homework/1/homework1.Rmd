@@ -1,6 +1,6 @@
 ---
-title: "Application: Stardew Valley Community Center Completion Times"
-author: "Jared Cummings"
+title: "Homework 1"
+author: "STAT 121"
 date: "Winter 2022"
 output: pdf_document
 ---
@@ -64,3 +64,18 @@ Increasing the sample size makes a statistic
 
 [ ] h) (b) and (d)
 
+In classical statistics (this class) probability is
+
+[ ] a) a statement of subjective uncertainty
+
+[ ] b) an empirical or theoretical frequency
+
+[ ] c) a number between 0 and 1
+
+[ ] d) (a), (b), and (c)
+
+[ ] e) all but (a)
+
+[ ] f) all but (b)
+
+[ ] g) all but (c)
