@@ -9,7 +9,10 @@ output: pdf_document
 
 ```{r, setup_and_data, echo = FALSE, message = FALSE}
 library(tidyverse)
-stardew <- read_csv('stardew_valley.csv', skip=1)
+# Sample of time in minutes to complete the Community Center in Stardew Valley
+stardew <- tibble(time_to_beat = c(2359, 3060, 3180, 3300, 3300, 3411, 3420, 
+                                   3703, 3720, 3758, 3893, 3900, 4007, 4013, 
+                                   4020, 4260, 4500, 4680, 5100))
 ```
 
 #### 1. What is the population we are trying to learn about by using this data?\newline

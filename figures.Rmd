@@ -1,0 +1,104 @@
+---
+title: "Lecture 3"
+author: "Jared Cummings"
+date: "12/31/2021"
+output: pdf_document
+---
+
+```{r, setup}
+library(tidyverse)
+library(cowplot) # extra plotting functions, may need to be installed with install.packages('cowplot')
+```
+
+
+# Basic graphical summaries/plots
+
+## Dotplot
+
+## Histogram
+
+## Density Plot
+
+
+
+
+# Boxplot
+
+
+
+# QQ plot
+
+```{r}
+x1 <- rt(1000, 3)
+x2 <- rnorm(1000)
+x3 <- rbeta(1000, 1, 1)
+#x3 <- x3[which(between(x3, -2, 2))][1:1000]
+
+
+dat <- tibble(heavy_tail = x1,
+              norm = x2,
+              light_tail = x3)
+
+heavy <- ggplot(dat, aes(sample = heavy_tail)) +
+  stat_qq() + 
+  stat_qq_line()
+normal <- ggplot(dat, aes(sample = norm)) + 
+  stat_qq() + 
+  stat_qq_line()
+light <- ggplot(dat, aes(sample = light_tail)) + 
+  stat_qq() + 
+  stat_qq_line()
+```
+Light tailed distribution:
+```{r}
+light
+```
+Heavy tailed distribution:
+```{r}
+heavy
+```
+The distribution as you'd expect it
+```{r}
+normal
+```
+
+
+
+# Mean (red) versus Median (blue)
+
+```{r, skewness}
+set.seed(121)
+
+n <- 1e5
+z <- rnorm(n)
+tau <- rgamma(n,2,1)
+sim <- tibble(left_skew = rbeta(n, 8, 2),
+              symmetric = rbeta(n, 5, 5),
+              right_skew = rbeta(n, 2, 8)) %>%
+  mutate(left_skew = left_skew - median(left_skew),
+         symmetric = symmetric - median(symmetric),
+         right_skew = right_skew - median(right_skew)) 
+left_plot <- ggplot(sim) +
+  geom_density(aes(left_skew)) +
+  geom_vline(aes(xintercept = median(left_skew)), color = 'blue') + 
+  geom_vline(aes(xintercept = mean(left_skew)), color = 'red', 
+             linetype = 'dashed') +
+  labs(x = '')
+sym_plot <- ggplot(sim) +
+  geom_density(aes(symmetric)) +
+  geom_vline(aes(xintercept = median(symmetric)), color = 'blue') + 
+  geom_vline(aes(xintercept = mean(symmetric)), color = 'red', 
+             linetype = 'dashed') + 
+  labs(x = '')
+right_plot <- ggplot(sim) +
+  geom_density(aes(right_skew)) +
+  geom_vline(aes(xintercept = median(right_skew)), color = 'blue') +
+  geom_vline(aes(xintercept = mean(right_skew)), color = 'red', 
+             linetype = 'dashed') +
+  labs(x = '')
+
+plot_grid(left_plot, sym_plot, right_plot, nrow = 3,
+          labels = c('Left skewed', 'Symmetrical', 'Right skewed'),
+          vjust = 1)
+```
+
