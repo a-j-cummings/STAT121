@@ -1,0 +1,134 @@
+---
+title: "Homework 2"
+author: "STAT 121"
+date: "Winter 2022"
+output: pdf_document
+---
+
+**Add code to answer the following questions. Answer them in order. Knit your R markdown file. Submit your R markdown file and knitted PDF on LearningSuite by the start of class on January 20th.**
+
+Team USA has been a dominant force in the pool for years. One of their top events has been the Men's 4x100m freestyle relay. Between 1964 and 1996 every Olympic gold medal in this event was won by Team USA. Team USA won again in 2008, but lost the top spot on the world stage two years later in an international competition. This loss got Michael Phelps out of retirement to help win back the title, which they did do in 2016 in Rio de Janiero. Michael Phelps has since retired again. In the lead-up to the 2020 (2021?) Olympics in Tokyo there was some doubt about if Team USA could win again. The following analysis investigates the 100m freestyle times of some of the top American swimmers leading up to their Tokyo debut.
+
+```{r, setup_and_data, echo = FALSE, message = FALSE}
+library(tidyverse)
+# 100m freestyle times (in seconds) of top Team USA male swimmers in 2020 and 2021 
+swimming <- read_csv(file = "
+  time,type,swimmer,year,race
+  45.871,Heats,Dressel,2020,3
+  46.422,Heats,Dressel,2020,6
+  46.121,Heats,Dressel,2020,10
+  45.561,Heats,Dressel,2020,12
+  45.201,Semifinals,Dressel,2020,13
+  45.081,Final,Dressel,2020,14
+  48.255,Heats,Dressel,2021,5
+  47.771,Semifinals,Dressel,2021,6
+  47.391,Final,Dressel,2021,7
+  49.452,Heats,Apple,2020,1
+  48.981,Final,Apple,2020,2
+  45.741,Heats,Apple,2020,4
+  45.941,Heats,Apple,2020,6
+  46.531,Heats,Apple,2020,7
+  46.501,Heats,Apple,2020,9
+  50.202,Heats,Apple,2021,1
+  49.912,Final,Apple,2021,2
+  49.577,Heats,Apple,2021,3
+  49.326,Final,Apple,2021,4
+  48.213,Heats,Apple,2021,5
+  47.782,Semifinals,Apple,2021,6
+  47.722,Final,Apple,2021,7
+  46.152,Heats,Pieroni,2020,5
+  46.562,Heats,Pieroni,2020,8
+  46.642,Heats,Pieroni,2020,9
+  46.331,Heats,Pieroni,2020,11
+  46.604,Semifinals,Pieroni,2020,13
+  48.781,Heats,Pieroni,2021,3
+  48.761,Final,Pieroni,2021,4
+  48.142,Heats,Pieroni,2021,5
+  48.133,Semifinals,Pieroni,2021,6
+  48.163,Final,Pieroni,2021,7
+  48.234,Heats,Curry,2021,5
+  48.515,Semifinals,Curry,2021,6
+  48.194,Final,Curry,2021,7
+  49.678,Heats,Becker,2021,3
+  50.128,Final,Becker,2021,4
+  48.618,Heats,Becker,2021,5
+  48.62,Semifinals,Becker,2021,6
+  48.225,Final,Becker,2021,7")
+```
+
+## Problem definition
+
+#### 1. What is the population we are trying to learn about by using this data?\newline
+Answer goes here
+
+#### 2. What is the sample size of the data?\newline
+Answer goes here
+
+#### 3. What is the random variable for the swimming data? What are the units?\newline
+Answer goes here
+
+#### 4. From looking at the data, what is a reasonable sample space? Defend your answer.\newline
+Answer goes here
+
+## Exploratory Data Analysis (EDA)
+
+#### 5. Produce a histogram of the 100m freestlye times. Comment on the shape of the distribution (left skewed, right skewed, symmetrical). How do you think the mean will compare to the median (<, >, =)?\newline
+Answer goes here
+
+#### 6. Compute the five-number summary, mean, and standard deviation for the 100m freestyle times. Was your prediction on how the mean and median would compare from (5) correct? If not, what features of the histogram might clue you in to the actual relationship?\newline
+Answer goes here
+
+#### 7. Check for outliers using the IQR. Are there any? Produce a boxplot and confirm your conclusion abour the presence of outliers. How could you identify the shape of the distribution from this boxplot instead of using a histogram?\newline
+Answer goes here
+
+#### 8. Below what value do 82% of the swimming times fall? (hint: you're looking for a quantile)\newline
+Answer goes here
+
+#### 9. Plots can be used to investigate more complicated relationships than just the distribution of one random variable. One of these relationships are *conditional distributions* which look at the distribution of one random variable at different values of another. A good example of this is to look at the freestyle times by swimmer. We can do this by putting the argument "fill = swimmer" inside of the "aes" function (remember to separate arguments with commas). Make a boxplot that does this. Are some swimmers faster than others? Who is the fastest on average? If someone reported summary statistics about swimming times without mentioning the effects of different swimmers what information do you lose? How should this inform how you interperet statistics you hear or read about?\newline
+Answer goes here
+
+#### Multiple choice. Put an X in the box of the answer you select (like this: [X])\newline
+In 2021 the top 1% of Americans hold more wealth than the middle 60%, commonly called the “middle class.” What quantile do these wealthy Americans represent?
+
+[ ] a) 0.01
+
+[ ] b) 0.4
+
+[ ] c) 0.6
+
+[ ] d) 0.99
+
+[ ] e) none of the above
+
+Select each correct answer: A left-skewed distribution always has 
+
+[ ] a) extreme values on the high end of the distribution
+
+[ ] b) extreme values on the low end of the distribution
+
+[ ] c) no extreme values
+
+[ ] d) a median equal to the mean
+
+[ ] e) a median greater than the mean
+
+[ ] f) a median less than the mean
+
+[ ] g) no median or mean
+
+Select each correct answer: A symmetrical distribution always has 
+
+[ ] a) extreme values on the high end of the distribution
+
+[ ] b) extreme values on the low end of the distribution
+
+[ ] c) no extreme values
+
+[ ] d) a median equal to the mean
+
+[ ] e) a median greater than the mean
+
+[ ] f) a median less than the mean
+
+[ ] g) no median or mean
+ 
