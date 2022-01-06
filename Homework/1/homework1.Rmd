@@ -1,0 +1,66 @@
+---
+title: "Application: Stardew Valley Community Center Completion Times"
+author: "Jared Cummings"
+date: "Winter 2022"
+output: pdf_document
+---
+
+**Add code to answer the following questions. Answer them in order. Knit your R markdown file. Submit your R markdown file and knitted PDF on LearningSuite by the start of class on January 11th.**
+
+Stardew Valley is a popular indie game where a disenchanted young city-dweller inherits their grandfather's farm and leaves behind corporate life for the community of a small town. Players farm crops, raise livestock, fish, forage, mine, fight monsters, and forge friendships with the residents of Pelican Town and the surrounding area. A major in-game achievement is the completion of the Community Center which kicks the evil JojaMart out of town and opens end game play. In this homework we will take a look at a sample of Community Center completion times.
+
+```{r, setup_and_data, echo = FALSE, message = FALSE}
+library(tidyverse)
+# Sample of time in minutes to complete the Community Center in Stardew Valley
+stardew <- tibble(time_to_beat = c(2359, 3060, 3180, 3300, 3300, 3411, 3420, 
+                                   3703, 3720, 3758, 3893, 3900, 4007, 4013, 
+                                   4020, 4260, 4500, 4680, 5100))
+```
+
+#### 1. What is the population we are trying to learn about by using this data?\newline
+Answer goes here
+
+#### 2. What is the sample size of the data?\newline
+Answer goes here
+
+#### 3. What is the random variable for the Stardew Valley data? What are the units?\newline
+Answer goes here
+
+#### 4. From looking at the data, what is a reasonable sample space? Defend your answer.\newline
+Answer goes here
+
+#### 5. R has functions for doing many simple calculations. One of these is the "mean" function. It is used the same as the "unique" function. What is the mean community center completion time of the data?\newline
+Answer goes here
+
+#### 6. Is the value you computed in (5) a parameter or a statistic? Defend your answer.\newline
+Answer goes here
+
+#### Multiple choice. Put an X in the box of the answer you select (like this: [X])
+An average is always a
+
+[ ] a) parameter
+
+[ ] b) statistic
+
+[ ] c) (a) and (b)
+
+[ ] d) (a) or (b)
+
+Increasing the sample size makes a statistic
+
+[ ] a) biased
+
+[ ] b) unbiased
+
+[ ] c) more precise
+
+[ ] d) less precise
+
+[ ] e) (a) and (c)
+
+[ ] f) (a) and (d)
+
+[ ] g) (b) and (c)
+
+[ ] h) (b) and (d)
+

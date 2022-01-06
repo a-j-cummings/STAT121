@@ -32,33 +32,3 @@ Answer goes here
 
 #### 6. Is the value you computed in (5) a parameter or a statistic? Defend your answer.\newline
 Answer goes here
-
-#### Multiple choice. Put an X in the box of the answer you select (like this: [X])
-An average is always a
-
-[ ] a) parameter
-
-[ ] b) statistic
-
-[ ] c) (a) and (b)
-
-[ ] d) (a) or (b)
-
-Increasing the sample size makes a statistic
-
-[ ] a) biased
-
-[ ] b) unbiased
-
-[ ] c) more precise
-
-[ ] d) less precise
-
-[ ] e) (a) and (c)
-
-[ ] f) (a) and (d)
-
-[ ] g) (b) and (c)
-
-[ ] h) (b) and (d)
-
