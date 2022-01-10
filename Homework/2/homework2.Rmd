@@ -84,8 +84,11 @@ Answer goes here
 #### 8. Below what value do 82% of the swimming times fall? (hint: you're looking for a quantile)\newline
 Answer goes here
 
-#### 9. Plots can be used to investigate more complicated relationships than just the distribution of one random variable. One of these relationships are *conditional distributions* which look at the distribution of one random variable at different values of another. A good example of this is to look at the freestyle times by swimmer. We can do this by putting the argument "fill = swimmer" inside of the "aes" function (remember to separate arguments with commas). Make a boxplot that does this. Are some swimmers faster than others? Who is the fastest on average? If someone reported summary statistics about swimming times without mentioning the effects of different swimmers what information do you lose? How should this inform how you interperet statistics you hear or read about?\newline
-Answer goes here
+#### 9. Plots can be used to investigate more complicated relationships than just the distribution of one random variable. One of these relationships are *conditional distributions* which look at the distribution of one random variable at different values of another. A good example of this is to look at the freestyle times by swimmer. We can do this by putting the argument "fill = swimmer" inside of the "aes" function (remember to separate arguments with commas). Run the following code to make a boxplot that does this and answer the following questions: Are some swimmers faster than others? Who is the fastest on average? If someone reported summary statistics about swimming times without mentioning the effects of different swimmers what information do you lose? How should this inform how you interperet statistics you hear or read about?\newline
+```{r}
+ggplot(swimming) +
+  geom_boxplot(aes(time, fill = swimmer))
+```
 
 #### Multiple choice. Put an X in the box of the answer you select (like this: [X])\newline
 In 2021 the top 1% of Americans hold more wealth than the middle 60%, commonly called the “middle class.” What quantile do these wealthy Americans represent?
