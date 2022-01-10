@@ -2,10 +2,10 @@
 title: "Homework 1"
 author: "STAT 121"
 date: "Winter 2022"
-output: pdf_document
+output: html_document
 ---
 
-**Add code to answer the following questions. Answer them in order. Knit your R markdown file. Submit your R markdown file and knitted PDF on LearningSuite by the start of class on January 13th.**
+**Add code to answer the following questions. Answer them in order. Knit your R markdown file. Submit your R markdown file and knitted HTML document on LearningSuite by the start of class on January 13th.**
 
 Stardew Valley is a popular indie game where a disenchanted young city-dweller inherits their grandfather's farm and leaves behind corporate life for the community of a small town. Players farm crops, raise livestock, fish, forage, mine, fight monsters, and forge friendships with the residents of Pelican Town and the surrounding area. A major in-game achievement is the completion of the Community Center which kicks the evil JojaMart out of town and opens end game play. In this homework we will take a look at a sample of Community Center completion times.
 

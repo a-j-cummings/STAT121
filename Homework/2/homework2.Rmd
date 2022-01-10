@@ -2,10 +2,10 @@
 title: "Homework 2"
 author: "STAT 121"
 date: "Winter 2022"
-output: pdf_document
+output: html_document
 ---
 
-**Add code to answer the following questions. Answer them in order. Knit your R markdown file. Submit your R markdown file and knitted PDF on LearningSuite by the start of class on January 20th.**
+**Add code to answer the following questions. Answer them in order. Knit your R markdown file. Submit your R markdown file and knitted HTML document on LearningSuite by the start of class on January 20th.**
 
 Team USA has been a dominant force in the pool for years. One of their top events has been the Men's 4x100m freestyle relay. Between 1964 and 1996 every Olympic gold medal in this event was won by Team USA. Team USA won again in 2008, but lost the top spot on the world stage two years later in an international competition. This loss got Michael Phelps out of retirement to help win back the title, which they did do in 2016 in Rio de Janiero. Michael Phelps has since retired again. In the lead-up to the 2020 (2021?) Olympics in Tokyo there was some doubt about if Team USA could win again. The following analysis investigates the 100m freestyle times of some of the top American swimmers leading up to their Tokyo debut.
 
